@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="4e135aee-0749-4daa-b279-bdb4551b943d" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-01-09T12:57:12.08+00:00" />
+  </meta>
+  <url value="StructureDefinition/CareConnect-GPC-DiagnosticReport-1" />
+  <name value="CareConnect-GPC-DiagnosticReport-1" />
+  <status value="draft" />
+  <date value="2019-01-07T14:44:10.091+00:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport.extension">
+      <path value="DiagnosticReport.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DiagnosticReport.extension:DateRecievedByGP">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="DateRecievedByGP" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="StructureDefinition/DateReceivedByGP" />
+      </type>
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.context">
+      <path value="DiagnosticReport.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

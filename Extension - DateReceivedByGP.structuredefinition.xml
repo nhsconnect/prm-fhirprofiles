@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="StructureDefinition/DateReceivedByGP" />
+  <name value="Extension - DateReceivedByGP" />
+  <status value="draft" />
+  <date value="2019-01-07T15:11:55.209+00:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="DiagnosticReport" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="StructureDefinition/DateReceivedByGP" />
+    </element>
+    <element id="Extension.value[x]:valueDateTime">
+      <path value="Extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <short value="Date DiagnosticReport received by GP" />
+      <type>
+        <code value="dateTime" />
+        <profile value="DiagnosticReport" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
